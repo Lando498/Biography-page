@@ -26,11 +26,13 @@
 }
 #pin {
     position: absolute;
-    top: 1.2vw;
-    right: 1.2vw;
+    top: 5vw;
+    right: 2vw;
     height: 8vh;
     width: 8vh;
     z-index: 10;
+    opacity: 0%;
+    transition: all 0.3s ease 0s;
 }
 
 @font-face {
@@ -43,18 +45,89 @@
 }
 
 #board {
-    width: calc(100% - 6vw);
-    height: calc(100vh);
+    width: calc(50% - 6vw);
+    height: calc(10vh);
     margin: 3vw;
     
-    background: #98694d18;
+    background: #FFF4D9;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.5px);
     -webkit-backdrop-filter: blur(6.5px);
     border: 1px solid rgba(152, 105, 77, 0.34);
-    color: white;
+    color: rgba(255, 255, 255, 0);
     font-family: witch;
     font-size: 3vh;
     letter-spacing: 0.2rem;
+    transition: all 0.5s;
+}
+#board:hover {
+  color: rgb(113, 54, 54);
+      width: calc(100% - 6vw);
+    height: calc(100vh);
+}
+
+#board:hover + #pin {
+  transition-delay: 0.3s; 
+  opacity: 100%;
+}
+
+#h2 {
+  color: rgb(113, 54, 54);
+}
+
+#therookie:hover > #rookieimg {
+  opacity: 100%;
+  cursor: pointer;
+}
+#house:hover > #houseimg {
+  opacity: 100%;
+  cursor: pointer;
+}
+#dexter:hover > #dexterimg {
+  opacity: 100%;
+  cursor: pointer;
+}
+#abbot:hover > #abbotimg {
+  opacity: 100%;
+  cursor: pointer;
+}
+#orville:hover > #orvilleimg {
+  opacity: 100%;
+  cursor: pointer;
+}
+#rookieimg {
+  z-index: 1000;
+  opacity: 0%;
+  right: 15vh;
+  transition: all 1s;
+  border-radius: 10px;
+}
+#houseimg {
+    z-index: 1000;
+  opacity: 0%;
+  right: 15vh;
+  transition: all 1s;
+  border-radius: 10px;
+}
+#dexterimg {
+    z-index: 1000;
+  opacity: 0%;
+  right: 15vh;
+  transition: all 1s;
+  border-radius: 10px;
+}
+#abbotimg {
+    z-index: 1000;
+  opacity: 0%;
+  right: 15vh;
+  transition: all 1s;
+  border-radius: 10px;
+}
+#orvilleimg {
+    z-index: 1000;
+  opacity: 0%;
+  right: 15vh;
+  transition: all 1s;
+  border-radius: 10px;
 }
